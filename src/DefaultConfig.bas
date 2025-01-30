@@ -119,6 +119,9 @@ Sub DefaultConfig()
         .Map "nmap v ToggleVisualMode"
         .Map "nmap V ToggleVisualLine"
 
+        Application.OnKey "{107}", "AddNumber"
+        Application.OnKey "{109}", "SubtractNumber"
+
 
         ' Border
         .Map "nmap bb ToggleBorderAll 1 2"                  ' xlContinuous, xlThin
