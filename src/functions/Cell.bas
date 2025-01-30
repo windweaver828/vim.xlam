@@ -228,6 +228,8 @@ Private Sub ProcessNumber(ByVal isSubtract As Boolean)
         valueType = VarType(targetCell.Value)
 
         Select Case valueType
+        Case vbEmpty
+            targetCell.Value = gVim.Count1 * procSign
         Case vbCurrency, vbByte, vbDate, vbDecimal, vbDouble, vbInteger, vbLong, vbSingle
             If InStr(targetCell.NumberFormatLocal, "%") > 0 Then
                 n = n / 100
